@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+#pragma mark - Command Line Helper: Public Interface
+
 @interface CommandLineHelper : NSObject
+
+// Life cycle
++ (CommandLineHelper *)sharedHelper;
+
+// Public API
+- (void)loadArguments;
 
 @end

@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CommandLineHelper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        // Load input
+        [[CommandLineHelper sharedHelper] loadArguments];
     }
     return 0;
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		79F2B0951E426BB400D2A69F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F2B0941E426BB400D2A69F /* main.m */; };
+		79F2B0A11E426D4300D2A69F /* CommandLineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F2B0A01E426D4300D2A69F /* CommandLineHelper.m */; };
+		79F2B0A41E426DB500D2A69F /* ProjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F2B0A31E426DB500D2A69F /* ProjectHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		79F2B0911E426BB400D2A69F /* 🎯TargetsChecker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "🎯TargetsChecker"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F2B0911E426BB400D2A69F /* TargetsChecker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TargetsChecker; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F2B0941E426BB400D2A69F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79F2B09E1E426CFB00D2A69F /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = Common/SynthesizeSingleton.h; sourceTree = "<group>"; };
+		79F2B09F1E426D4300D2A69F /* CommandLineHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandLineHelper.h; path = Classes/CommandLineHelper.h; sourceTree = "<group>"; };
+		79F2B0A01E426D4300D2A69F /* CommandLineHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandLineHelper.m; path = Classes/CommandLineHelper.m; sourceTree = "<group>"; };
+		79F2B0A21E426DB500D2A69F /* ProjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectHelper.h; path = Classes/ProjectHelper.h; sourceTree = "<group>"; };
+		79F2B0A31E426DB500D2A69F /* ProjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectHelper.m; path = Classes/ProjectHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +56,7 @@
 		79F2B0921E426BB400D2A69F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79F2B0911E426BB400D2A69F /* 🎯TargetsChecker */,
+				79F2B0911E426BB400D2A69F /* TargetsChecker */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +64,38 @@
 		79F2B0931E426BB400D2A69F /* 🎯TargetsChecker */ = {
 			isa = PBXGroup;
 			children = (
+				79F2B09D1E426CDC00D2A69F /* Common */,
+				79F2B09B1E426BBF00D2A69F /* Command Line Helper */,
+				79F2B09C1E426BDD00D2A69F /* Project Helper */,
 				79F2B0941E426BB400D2A69F /* main.m */,
 			);
 			path = "🎯TargetsChecker";
+			sourceTree = "<group>";
+		};
+		79F2B09B1E426BBF00D2A69F /* Command Line Helper */ = {
+			isa = PBXGroup;
+			children = (
+				79F2B09F1E426D4300D2A69F /* CommandLineHelper.h */,
+				79F2B0A01E426D4300D2A69F /* CommandLineHelper.m */,
+			);
+			name = "Command Line Helper";
+			sourceTree = "<group>";
+		};
+		79F2B09C1E426BDD00D2A69F /* Project Helper */ = {
+			isa = PBXGroup;
+			children = (
+				79F2B0A21E426DB500D2A69F /* ProjectHelper.h */,
+				79F2B0A31E426DB500D2A69F /* ProjectHelper.m */,
+			);
+			name = "Project Helper";
+			sourceTree = "<group>";
+		};
+		79F2B09D1E426CDC00D2A69F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				79F2B09E1E426CFB00D2A69F /* SynthesizeSingleton.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,7 +115,7 @@
 			);
 			name = "🎯TargetsChecker";
 			productName = "🎯TargetsChecker";
-			productReference = 79F2B0911E426BB400D2A69F /* 🎯TargetsChecker */;
+			productReference = 79F2B0911E426BB400D2A69F /* TargetsChecker */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -120,7 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F2B0A41E426DB500D2A69F /* ProjectHelper.m in Sources */,
 				79F2B0951E426BB400D2A69F /* main.m in Sources */,
+				79F2B0A11E426D4300D2A69F /* CommandLineHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +256,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7VU9XC3L35;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TargetsChecker;
 			};
 			name = Debug;
 		};
@@ -226,7 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7VU9XC3L35;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TargetsChecker;
 			};
 			name = Release;
 		};

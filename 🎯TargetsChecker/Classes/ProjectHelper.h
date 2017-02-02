@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+#pragma mark - Project Helper: Public Interface
+
 @interface ProjectHelper : NSObject
+
+// Life cycle
++ (ProjectHelper *)sharedHelper;
+
+// Public API
+- (void)loadProjectPropertiesWithProjectPath:(NSString *)projectPath;
+- (void)loadProjectTargetsWithTargets:(NSArray *)targets;
 
 @end
