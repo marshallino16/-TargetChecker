@@ -79,12 +79,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ProjectHelper, sharedHelper);
     
     for (NSDictionary *target in self.projectTargets) {
         
-        printf("\n▶️ BuildPhases for target: %s\n", [[NSString stringWithFormat:@"%@", [target objectForKey:@"name"]] UTF8String] );
-        
         NSArray *buildPhases = [target objectForKey:@"buildPhases"];
-        for (int i = 0 ; i < buildPhases.count ; ++i) {
-            printf("%s\n", [buildPhases[i] UTF8String]);
-        }
+        
+        printf("\n▶️ %lu BuildPhases for target: %s\n", buildPhases.count, [[NSString stringWithFormat:@"%@", [target objectForKey:@"name"]] UTF8String] );
+        
         
         [availableBuildPhases setObject:buildPhases forKey:[target objectForKey:@"name"]];
     }
@@ -115,7 +113,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ProjectHelper, sharedHelper);
                 
                 if ( [obj objectForKey:@"files"] && ((NSArray *)[obj objectForKey:@"files"]).count > 0 ) {
                     
-                    printf("BuildPhase: %s contains files section\n", [key UTF8String]);
+                    //printf("BuildPhase: %s contains files section\n", [key UTF8String]);
                     
                     NSArray *fileArray = [obj objectForKey:@"files"];
                     
@@ -153,11 +151,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ProjectHelper, sharedHelper);
             
             [((NSDictionary *)availableFilesPerTarget[i-1]) enumerateKeysAndObjectsUsingBlock:^(NSString *keyPrevious, NSArray *objPrevious, BOOL * _Nonnull stop) {
                 
-                NSLog(@"Obj %lu", objPrevious.count);
+                //NSLog(@"Obj %lu", objPrevious.count);
                 
                 [((NSDictionary *)availableFilesPerTarget[i]) enumerateKeysAndObjectsUsingBlock:^(NSString *keyCurrent, NSArray *objCurrent, BOOL * _Nonnull stop) {
                     
-                    NSLog(@"Obj %lu", objCurrent.count);
+                    //NSLog(@"Obj %lu", objCurrent.count);
                     
                     NSMutableArray *intermediate = [NSMutableArray arrayWithArray:objPrevious];
                     [intermediate removeObjectsInArray:objCurrent];

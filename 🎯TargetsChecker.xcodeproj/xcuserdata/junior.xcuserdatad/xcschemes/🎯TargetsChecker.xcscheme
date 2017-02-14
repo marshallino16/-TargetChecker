@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79F2B0901E426BB400D2A69F"
-               BuildableName = "&#x1f3af;TargetsChecker"
+               BuildableName = "TargetsChecker"
                BlueprintName = "&#x1f3af;TargetsChecker"
                ReferencedContainer = "container:&#x1f3af;TargetsChecker.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79F2B0901E426BB400D2A69F"
-            BuildableName = "&#x1f3af;TargetsChecker"
+            BuildableName = "TargetsChecker"
             BlueprintName = "&#x1f3af;TargetsChecker"
             ReferencedContainer = "container:&#x1f3af;TargetsChecker.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79F2B0901E426BB400D2A69F"
-            BuildableName = "&#x1f3af;TargetsChecker"
+            BuildableName = "TargetsChecker"
             BlueprintName = "&#x1f3af;TargetsChecker"
             ReferencedContainer = "container:&#x1f3af;TargetsChecker.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79F2B0901E426BB400D2A69F"
-            BuildableName = "&#x1f3af;TargetsChecker"
+            BuildableName = "TargetsChecker"
             BlueprintName = "&#x1f3af;TargetsChecker"
             ReferencedContainer = "container:&#x1f3af;TargetsChecker.xcodeproj">
          </BuildableReference>
