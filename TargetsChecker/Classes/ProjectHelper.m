@@ -195,7 +195,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ProjectHelper, sharedHelper);
         
         if ( [objectFileType isEqualToString:@"PBXFileReference"] && [reference isEqualToString:keyFile]) {
             
-            printf("%s\n", [[objFile objectForKey:@"path"] UTF8String]);
+            printf("         -  %s\n", [[objFile objectForKey:@"path"] UTF8String]);
         }
     }];
 }

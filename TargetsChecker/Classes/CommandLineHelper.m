@@ -51,6 +51,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(CommandLineHelper, sharedHelper);
     if ([argumentsDefaults objectForKey:ARG_HELP]) {
         printf("# HELP requested \n");
         printf("%s \n\n", [self.showHelp UTF8String]);
+        return;
     }
     
     // EXCLUDE
@@ -88,7 +89,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(CommandLineHelper, sharedHelper);
 #pragma mark - Private method
 
 - (NSString *)showHelp {
-    return nil;
+    return @"Available arguments:\n\n -project : Path to .xcodeproj file\n\n -targets : targets to check. Ex: 'Target1,Target2'\n\n -exclude : specify files type to exclude. Ex: 'swift,storyboard'";
 }
 
 @end
